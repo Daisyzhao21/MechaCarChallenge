@@ -1,0 +1,29 @@
+#load dplyr package
+library(dplyr)
+
+#read file
+MechaCarChallenge <- read.csv(file='MechaCar_mpg.csv')
+#perform linear regression
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data= MechaCarChallenge)
+
+#perform summary
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data= MechaCarChallenge))
+
+########################
+#Summary Statistics on Suspension Coils. 
+MechaCarChallenge <- read.csv(file='Suspension_Coil.csv')
+
+#get a total summary
+total_summary<-Suspension_Coil %>% summarise(Mean=mean(PSI),Meadian=median(PSI),SD=sd(PSI),Variance=var(PSI))
+
+#create a lot summary
+lot_summary<-Suspension_Coil %>% group_by(Manufacturing_Lot)%>% summarise(Mean=mean(PSI),Meadian=median(PSI),SD=sd(PSI),Variance=var(PSI))
+var
+#summarize_demo
+total_summary
+lot_summary
+
+t.test(Suspension_Coil$PSI, mu=1500)
+t.test(subset(Suspension_Coil , Manufacturing_Lot=="Lot1")$PSI, mu = 1500)
+t.test(subset(Suspension_Coil , Manufacturing_Lot=="Lot2")$PSI, mu = 1500)
+t.test(subset(Suspension_Coil , Manufacturing_Lot=="Lot3")$PSI, mu = 1500)
