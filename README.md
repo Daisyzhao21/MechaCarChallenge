@@ -13,7 +13,8 @@ From the analysis, Lot one and two are both within the design specifications whi
 
 ## T-Tests on Suspension Coils
 According to the T-Tests on Suspension Coils in Lot 2 the p-value is .607 which means there is evidence that the suspension coil is different from the population mean. 
-https://github.com/Daisyzhao21/MechaCarChallenge/blob/main/t-test.png?raw=true
+![](https://github.com/Daisyzhao21/MechaCarChallenge/blob/main/t-test.png?raw=true)
+
 
 ## Study Design: MechaCar vs Competition
 
